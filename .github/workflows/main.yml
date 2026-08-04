@@ -1,3 +1,4 @@
+
 name: My First Workflow
 
 on:
@@ -9,8 +10,14 @@ jobs:
       - name: hello-job
         run: echo " sdfsdf" 
     
-    steps:
-      - name: Print Hello
-        run: echo "Hello! GitHub Action"
-    
-  
+
+#  name: my First Workflow
+#  on: workflow_dispatch
+#  jobs:
+#   job1:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: hellojob
+#         run: echo " sdfsfs"
+        
