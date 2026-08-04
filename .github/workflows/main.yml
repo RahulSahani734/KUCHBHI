@@ -1,0 +1,9 @@
+ name: my First Workflow
+ on: workflow_dispatch
+ jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hellojob
+        run: echo " sdfsfs"
+        
