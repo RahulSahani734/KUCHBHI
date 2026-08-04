@@ -5,5 +5,13 @@
     runs-on: ubuntu-latest
     steps:
       - name: hellojob
-        run: echo " sdfsfs"
+        run: echo " Welcome To a job"
+  printer:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Say!hii
+       run: echo "Hii everyone"
+   # steps:
+   #    - name: Intentional Error
+   #      run: ech "This will fail"
         
