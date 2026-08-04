@@ -11,7 +11,7 @@
    steps:
      - name: Say!hii
        run: echo "Hii everyone"
-   # steps:
-   #    - name: Intentional Error
-   #      run: ech "This will fail"
-        
+     - name: Intentional_Error
+       run: echo "This will fail"
+     - name: CheckCode
+       run: echo "Code Run Successfully"
