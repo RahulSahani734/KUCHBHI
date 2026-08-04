@@ -3,9 +3,12 @@ name: My First Workflow
 on:
   workflow_dispatch:
 jobs:
-  name: hello-job
+  jobe1:
     runs-on: ubuntu-latest
-
+    steps: 
+      - name: hello-job
+        run: echo " sdfsdf" 
+    
     steps:
       - name: Print Hello
         run: echo "Hello! GitHub Action"
