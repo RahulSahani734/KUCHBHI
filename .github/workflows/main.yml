@@ -15,3 +15,10 @@
        run: echo "This will fail"
      - name: CheckCode
        run: echo "Code Run Successfully"
+  checker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CheckFunction
+        run: echo "Code is running SuccessFully"
+      - name: PassError
+        run: echo "Code is not running"
