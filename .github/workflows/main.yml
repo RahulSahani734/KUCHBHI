@@ -1,0 +1,24 @@
+ name: my First Workflow
+ on: workflow_dispatch
+ jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hellojob
+        run: echo " Welcome To a job"
+  printer:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Say!hii
+       run: echo "Hii everyone"
+     - name: Intentional_Error
+       run: echo "This will fail"
+     - name: CheckCode
+       run: echo "Code Run Successfully"
+  checker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CheckFunction
+        run: echo "Code is running SuccessFully"
+      - name: PassError
+        run: echo "Code is not running"
