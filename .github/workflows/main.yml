@@ -6,7 +6,7 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Hello Job
         run: echo "Welcome To Job 1"
@@ -31,7 +31,7 @@ jobs:
 
   printer:
     runs-on: ubuntu-latest
-
+    needs: job1
     steps:
       - name: Say Hi
         run: echo "Hi Everyone"
@@ -56,7 +56,7 @@ jobs:
 
   checker:
     runs-on: ubuntu-latest
-
+    needs: printer
     steps:
       - name: Check Function
         run: echo "Code is Running Successfully"
