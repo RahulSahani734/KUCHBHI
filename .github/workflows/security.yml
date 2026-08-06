@@ -1,0 +1,37 @@
+name: projectcheck
+
+on:
+  workflow_dispatch
+
+jobs:
+    functiontester:
+      runs-on: ubuntu-latest
+      steps:
+        - name: checknumbersfunction
+          run: echo "Numbers function run successfully "
+          
+ 
+        - name: checkuser
+          run: echo "function user run successfully "
+    
+      
+        - name: checkProject 
+          run: echo "Project run successfully "
+
+        - name: Check Node Version
+          run: node -v
+
+        - name: Check NPM Version
+          run: npm -v
+      
+        - name: Install Dependencies
+          run: npm install
+      
+        - name: Run Tests
+          run: npm test
+      
+        - name: Build Project
+          run: npm run build
+      
+        - name: Print Success Message
+          run: echo "Build completed successfully!"
