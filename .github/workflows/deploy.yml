@@ -1,8 +1,24 @@
 name: tester
 on: workflow_dispatch
 jobs:
+
   checkfunction:
     runs-on: ubuntu-latest
     steps:
       - name: checking_function
         run: echo "successfully running"
+        
+  checkloop:
+    
+    runs-on: ubuntu-latest
+    needs: checkfunction
+    steps:
+      - name: checking_function
+        run: echo "successfully running"
+        
+  checkerror:
+      runs-on: ubuntu-latest
+      needs: checkloop
+      steps:
+        - name: checking_function
+          run: echo "successfully running 👍 "
