@@ -1,24 +1,80 @@
- name: my First Workflow
- on: workflow_dispatch
- jobs:
+name: My First Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
   job1:
     runs-on: ubuntu-latest
+
     steps:
-      - name: hellojob
-        run: echo " Welcome To a job"
+      - name: Hello Job
+        run: echo "Welcome To Job 1"
+
+      - name: Print Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Show Date
+        run: date
+
+      - name: Show Current User
+        run: whoami
+
+      - name: Print Operating System
+        run: uname -a
+
+      - name: Job Completed
+        run: echo "Job 1 Completed Successfully"
+
   printer:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Say!hii
-       run: echo "Hii everyone"
-     - name: Intentional_Error
-       run: echo "This will fail"
-     - name: CheckCode
-       run: echo "Code Run Successfully"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hi
+        run: echo "Hi Everyone"
+
+      - name: Print Runner Name
+        run: hostname
+
+      - name: Print Environment Variable
+        run: echo "Runner OS = $RUNNER_OS"
+
+      - name: Show Git Version
+        run: git --version
+
+      - name: Show Node Version
+        run: node --version
+
+      - name: Intentional Message
+        run: echo "This will not fail"
+
+      - name: Check Code
+        run: echo "Code Run Successfully"
+
   checker:
     runs-on: ubuntu-latest
+
     steps:
-      - name: CheckFunction
-        run: echo "Code is running SuccessFully"
-      - name: PassError
-        run: echo "Code is not running"
+      - name: Check Function
+        run: echo "Code is Running Successfully"
+
+      - name: Print Working Directory
+        run: pwd
+
+      - name: List Files
+        run: ls
+
+      - name: Print Current Time
+        run: date
+
+      - name: Display Environment Variables
+        run: env
+
+      - name: Print Success Message
+        run: echo "Everything looks good."
+
+      - name: Finish Job
+        run: echo "Checker Job Completed"
